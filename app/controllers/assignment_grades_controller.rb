@@ -1,4 +1,5 @@
 class AssignmentGradesController < ApplicationController
+  before_action :authenticate
   before_action :set_assignment_grade, only: [:show, :edit, :update, :destroy]
 
   # GET /assignment_grades

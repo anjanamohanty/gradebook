@@ -13,5 +13,7 @@ class AuthenticateController < ApplicationController
   end
 
   def logout
+    session[:teacher_id] = nil
+    redirect_to authenticate_login_path, notice: "You have been logged out"
   end
 end
