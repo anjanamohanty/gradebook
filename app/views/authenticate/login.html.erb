@@ -2,8 +2,8 @@
 
 <h1>Log in to Gradebook</h1>
 
-<%= form_tag do %>
+<%= form_tag(authenticate_login_path) do %>
   <p><%= email_field_tag :email, nil, placeholder: "Email" %></p>
   <p><%= password_field_tag :password, nil, placeholder: "Password" %></p>
-  <%= submit_tag authenticate_login_path %>
+  <%= submit_tag "Login" %>
 <% end %>
